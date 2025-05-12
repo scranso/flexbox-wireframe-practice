@@ -7,6 +7,7 @@
     border-radius: 10px;
     font-size: xx-large;
   }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -16,46 +17,29 @@
   .header {
     background-color: rgb(237, 81, 107);
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     height: 5rem;
     justify-content: center;
     text-align: center;
     border-radius: 10px;
+    padding: 1rem;
   }
 
-  .articles {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    padding: 1rem;
-    flex: 1;
-    gap: 1rem;
-    border-radius: 10px;
-    
-  }
-
-  article {  /* No touchy- container for articles for some reason */
-     background: rgb(237, 59, 127);
-    /* flex: 1 1 calc(33% - 1rem); */
-    padding: 1rem;
-    box-sizing: border-box;
-    min-width: 200px;
-    border-radius: 10px;
-    font-size: large;
-  }
-  
   .outer {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
     background-color: rgb(114, 205, 114);
     border-radius: 10px;
   }
-  
+
   .aside {
     display: flex;
     background: rgb(57, 57, 154);
     /* padding: 1rem; */
-    height: 5rem;
+    height: 100%;
+    min-height: 100%;
     text-align: center;
     align-items: center;
     border-radius: 10px;
@@ -63,6 +47,44 @@
     text-align: center;
   }
 
+  .articles {
+    display: flex;
+    /* text-align: center; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* padding: 1rem; */
+    gap: 1rem;
+    /* border-radius: 10px; */
+    
+  }
+
+  article {  
+    background: rgb(237, 59, 127);
+    padding: 1rem;
+    /* box-sizing: border-box; */
+    min-width: 200px;
+    border-radius: 10px;
+    font-size: large;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .aside {
+      flex: 1;
+      align-items: center;
+      height: auto;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .outer {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .articles {
+      flex: 3;
+    }
+  }
+  
   .footer {
     display: flex;
     background-color: orange;
